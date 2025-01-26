@@ -1,5 +1,114 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: small;
+    box-sizing: border-box;
+    border: none;
+}
+
+.calc-ctn {
+    border: 1px solid green;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    resize: both; 
+    margin: 3rem auto;
+    width: 30rem;
+    background-color: #1F2937;   
+
+    /* Used this for fitting the height of buttons inside container */
+    height: 35rem; 
+
+    
+    
+}
+
+
+.display-ctn {
+    border-bottom: 3px solid #008000;
+    padding: 2rem;
+    background-color: #1F2937;
+    color: #ffffff;
+    
+   /* This is to apply flex grow on the display-text container */
+    display: flex;
+  
+    /* Used this for fitting the height of buttons inside container */
+    height: 8rem;
+}
+
+.display-ctn > div {
+ /* This is to ensure that the display-text will stretch when container size is adjusted*/
+    flex-grow: 1;
+
+    border: 3px solid #008000;
+    border-radius: 0.5rem;
+    width: 26rem;
+    height: 5rem;
+    position: relative;
+}
+.display-text {
+    font-size: 2rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem;
+}
+
+.button-ctn {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* Used this for fitting the height of buttons inside container */
+    margin: 0.5rem;
+    gap: 0.5rem; 
+    
+
+    /* 35rem-8rem - 0.5 - 0.5  = 26rem, This is to ensure that my buttons will fit from top to buttom */
+    height: 26rem; 
+}
+
+button {
+    font-size: 3rem;
+    border-radius: 1rem;
+    background-color: #D1D5DB;
+    cursor: pointer;
+   
+   /* 25% flex basis, is to ensure there is four buttons per row  */
+   flex: 1 0 20%;  
+}
+
+.operator-btn {
+    border-radius: 50%;
+    max-width: 6rem;
+    background-color: #F59E0B;    
+}
+
+.equal-btn {
+    flex: 1 0 43%;
+    background-color: #10B981;
+    color: white;
+    
+}
+
+button:hover {
+    background-color: hsl(216, 12%, 95%);
+    color:#008000;
+}
+
+button:active {
+    background-color: hsl(216, 12%, 100%); 
+}
+.operator-btn:hover {
+    background-color: hsl(38, 92%, 60%);   
+    color: hsl(0, 0%, 90%);
+}
+.operator-btn:active {
+    background-color: hsl(38, 92%, 70%);   
+    color: hsl(0, 0%, 90%);
+}
+.equal-btn:hover {
+    background-color: hsl(160, 84%, 50%); 
+    color: white;
+}
+.equal-btn:active {
+    background-color: hsl(160, 84%, 70%); 
 }

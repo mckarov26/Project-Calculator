@@ -44,6 +44,9 @@
     width: 26rem;
     height: 5rem;
     position: relative;
+
+    /* This is to ensure the result display wont overflow in the container. */
+    overflow:hidden;
 }
 .display-text {
     font-size: 2rem;
@@ -92,6 +95,7 @@ button {
 button:hover {
     background-color: hsl(216, 12%, 95%);
     color:#008000;
+   
 }
 
 button:active {
